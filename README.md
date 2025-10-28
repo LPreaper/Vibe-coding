@@ -1,7 +1,7 @@
-# Vibing
+# Wise & Wide
 This a the repo for The Vibe Coding Course containing source code, documentation, and any related files to the project.
 ## Description
-Vibing allows gym owners to manage classes, schedules, and user accounts smartly and securely. Members can browse classes, see gym hours, and receive reminders before their sessions, as well as see their subscription status.
+Wise & Wide allows gym owners to manage classes, schedules, and user accounts smartly and securely. Members can browse classes, see gym hours, and receive reminders before their sessions, as well as see their subscription status.
 
 ## Team
 ### Team Name
