@@ -1,0 +1,509 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* ATHLION Design System - Greek-Inspired Palette */
+  --font-size: 16px;
+  
+  /* Core Colors */
+  --marble-white: #F7F5F2;
+  --aegean-blue: #1E4B82;
+  --sandstone-beige: #C9A678;
+  --charcoal-gray: #3C3C3C;
+  --olive-bronze: #9A7B4F;
+  
+  /* Theme Mappings */
+  --background: #F7F5F2;
+  --foreground: #3C3C3C;
+  --card: #ffffff;
+  --card-foreground: #3C3C3C;
+  --popover: #ffffff;
+  --popover-foreground: #3C3C3C;
+  --primary: #1E4B82;
+  --primary-foreground: #ffffff;
+  --secondary: #C9A678;
+  --secondary-foreground: #3C3C3C;
+  --muted: #F7F5F2;
+  --muted-foreground: #9A7B4F;
+  --accent: #C9A678;
+  --accent-foreground: #3C3C3C;
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+  --border: rgba(60, 60, 60, 0.1);
+  --input: transparent;
+  --input-background: #ffffff;
+  --switch-background: #C9A678;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #1E4B82;
+  --chart-1: #1E4B82;
+  --chart-2: #C9A678;
+  --chart-3: #9A7B4F;
+  --chart-4: #3C3C3C;
+  --chart-5: #F7F5F2;
+  --radius: 1rem;
+  --sidebar: #F7F5F2;
+  --sidebar-foreground: #3C3C3C;
+  --sidebar-primary: #1E4B82;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #C9A678;
+  --sidebar-accent-foreground: #3C3C3C;
+  --sidebar-border: rgba(60, 60, 60, 0.1);
+  --sidebar-ring: #1E4B82;
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/**
+ * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h3 {
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    p {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    label {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    button {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+/* ATHLION Custom Styles */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Cinzel:wght@400;500;600;700&display=swap');
+
+.font-serif {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.font-sans {
+  font-family: 'Inter', sans-serif;
+}
+
+.font-greek {
+  font-family: 'Cinzel', serif;
+  letter-spacing: 0.08em;
+}
+
+/* Marble texture background */
+.marble-texture {
+  background-image: 
+    linear-gradient(rgba(247, 245, 242, 0.65), rgba(247, 245, 242, 0.70)),
+    url('https://images.unsplash.com/photo-1566041510394-cf7c8fe21800?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYXJibGUlMjB0ZXh0dXJlJTIwd2hpdGV8ZW58MXx8fHwxNzYxNjQ3NDA1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.marble-card {
+  background: 
+    linear-gradient(135deg, rgba(255, 255, 255, 0.88), rgba(247, 245, 242, 0.92)),
+    url('https://images.unsplash.com/photo-1566041510394-cf7c8fe21800?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYXJibGUlMjB0ZXh0dXJlJTIwd2hpdGV8ZW58MXx8fHwxNzYxNjQ3NDA1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral');
+  background-size: cover;
+  background-position: center;
+  backdrop-filter: blur(10px);
+}
+
+.marble-card-strong {
+  background: 
+    linear-gradient(135deg, rgba(255, 255, 255, 0.75), rgba(247, 245, 242, 0.82)),
+    url('https://images.unsplash.com/photo-1566041510394-cf7c8fe21800?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYXJibGUlMjB0ZXh0dXJlJTIwd2hpdGV8ZW58MXx8fHwxNzYxNjQ3NDA1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral');
+  background-size: cover;
+  background-position: center;
+  backdrop-filter: blur(8px);
+}
+
+/* Gold divider */
+.gold-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #C9A678, transparent);
+}
+
+/* Soft shadow - natural light over stone */
+.soft-shadow {
+  box-shadow: 0 4px 20px rgba(60, 60, 60, 0.08), 0 2px 8px rgba(60, 60, 60, 0.04);
+}
+
+/* Button glow effect */
+.btn-glow {
+  box-shadow: 0 0 20px rgba(30, 75, 130, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-glow:hover {
+  box-shadow: 0 0 30px rgba(30, 75, 130, 0.5);
+}
+
+/* Circular progress indicator */
+.progress-circle {
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.5s ease;
+}
+
+/* Olive wreath decoration */
+.olive-wreath {
+  border: 2px solid #C9A678;
+  border-radius: 50%;
+  position: relative;
+}
+
+.olive-wreath::before,
+.olive-wreath::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #C9A678;
+  border-radius: 50%;
+  top: -4px;
+}
+
+.olive-wreath::before {
+  left: 10%;
+}
+
+.olive-wreath::after {
+  right: 10%;
+}
+
+/* Hide scrollbar for horizontal scrolling on mobile */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Safe area padding for mobile devices with notches */
+.safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* Touch optimization - prevent text selection on buttons */
+button {
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Line clamp utilities for text truncation */
+.line-clamp-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+/* Fade-in animation for list items */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+  opacity: 0;
+}
+
+/* Collapsible animations */
+@keyframes slideDown {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    height: var(--radix-collapsible-content-height);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    height: var(--radix-collapsible-content-height);
+    opacity: 1;
+  }
+  to {
+    height: 0;
+    opacity: 0;
+  }
+}
+
+[data-slot="collapsible-content"] {
+  overflow: hidden;
+}
+
+[data-slot="collapsible-content"][data-state="open"] {
+  animation: slideDown 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-slot="collapsible-content"][data-state="closed"] {
+  animation: slideUp 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Enhanced collapsible trigger interaction */
+[data-slot="collapsible-trigger"] {
+  transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 0.5rem;
+}
+
+[data-slot="collapsible-trigger"]:hover {
+  background-color: rgba(247, 245, 242, 0.5);
+}
+
+[data-slot="collapsible-trigger"]:active {
+  transform: scale(0.98);
+  background-color: rgba(247, 245, 242, 0.7);
+}
+
+/* Smooth content reveal with slight fade */
+[data-slot="collapsible-content"] > * {
+  animation: fadeIn 400ms ease-out;
+  animation-delay: 100ms;
+  animation-fill-mode: backwards;
+}
+
+/* Bounce animation for interactive elements */
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-bounce-in {
+  animation: bounceIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Subtle pulse for active states */
+@keyframes subtlePulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+
+.animate-subtle-pulse {
+  animation: subtlePulse 2s ease-in-out infinite;
+}
+
+/* Spring scale animation for interactive badges */
+@keyframes springScale {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.1);
+  }
+  60% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Smooth badge animations on collapsible toggle */
+[data-slot="collapsible-trigger"]:active .badge-count {
+  animation: springScale 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Enhance badge visibility */
+.badge-count {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Glassmorphism effect for collapsible cards */
+.collapsible-card {
+  backdrop-filter: blur(12px);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.85), rgba(247, 245, 242, 0.9));
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.collapsible-card:hover {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(247, 245, 242, 0.95));
+  box-shadow: 0 8px 32px rgba(60, 60, 60, 0.12), 0 4px 16px rgba(60, 60, 60, 0.08);
+}
+
+/* Chevron rotation with spring effect */
+@keyframes chevronRotateOpen {
+  0% {
+    transform: rotate(0deg);
+  }
+  60% {
+    transform: rotate(190deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes chevronRotateClose {
+  0% {
+    transform: rotate(180deg);
+  }
+  60% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* Smooth chevron icon transitions */
+.chevron-icon {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transform-origin: center;
+}
